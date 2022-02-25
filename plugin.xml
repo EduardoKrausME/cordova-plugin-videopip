@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-videopip"
+        version="1.0.0"
+        xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <name>cordova-plugin-videopip</name>
+
+    <js-module name="VideoPictureInPicture" src="www/VideoPictureInPicture.js">
+        <clobbers target="VideoPictureInPicture" />
+    </js-module>
+
+    <platform name="android">
+
+        <edit-config file="AndroidManifest.xml" mode="merge" target="/manifest/application/activity">
+            <activity android:supportsPictureInPicture="true"
+                      android:launchMode="singleTask"
+                      android:resizeableActivity="true" />
+        </edit-config>
+
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="VideoPictureInPicture">
+                <param name="android-package" value="com.eduardokraus.videopip.VideoPictureInPicture" />
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/VideoPictureInPicture.java"
+                     target-dir="src/com/eduardokraus/videopip/VideoPictureInPicture" />
+    </platform>
+</plugin>

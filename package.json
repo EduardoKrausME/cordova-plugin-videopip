@@ -1,0 +1,20 @@
+{
+    "name" : "cordova-plugin-videopip",
+    "version" : "1.0.0",
+    "description" : "Cordova Vídeo Picture in Picture",
+    "author" : "Eduardo Kraus",
+    "cordova" : {
+        "id" : "cordova-plugin-videopip",
+        "platforms" : [
+            "android"
+        ]
+    },
+    "repository" : {
+        "type" : "git",
+        "url" : "https://github.com/EduardoKrausME/cordova-plugin-videopip"
+    },
+    "bugs" : {
+        "url" : "https://github.com/EduardoKrausME/cordova-plugin-videopip/issues"
+    },
+    "homepage" : "https://github.com/EduardoKrausME/cordova-plugin-videopip#readme"
+}
