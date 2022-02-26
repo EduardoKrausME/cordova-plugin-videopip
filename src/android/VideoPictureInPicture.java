@@ -60,7 +60,10 @@ public class VideoPictureInPicture extends CordovaPlugin {
         } else if(action.equals("isSupported")){
             this.isSupported(callbackContext);
             return true;
-        }
+        } else if(action.equals("initializePip")){
+             this.initializePip();
+             return true;
+         }
         return false;
     }
     
